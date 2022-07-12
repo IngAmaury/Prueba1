@@ -1,0 +1,32 @@
+<h1>NgModel</h1>
+<p>Nombre {{person.name}}</p>
+<input type="text" required #nameinput="ngModel" [(ngModel)]="person.name">
+<p>Valid: {{nameinput.valid}}</p>
+<p>Edad {{person.age}}</p>
+<input type="number" required min="-10" max="10" #ageinput="ngModel" [(ngModel)]="person.age">
+<p>Valid: {{ageinput.valid}}</p>
+<hr>
+<h1>Eventos</h1>
+<button [disabled]="btnDisable">Mucho texto</button>
+<button (click)="togglebutton()">Toggle Button</button>
+<h2>Otra prueba de evento con el objeto persona y el atributo edad</h2>
+<p>Edad = {{person.age}}</p>
+<button (click)="moreage()">Age++</button>
+<p><progress max="100" [value]="person.age">Tekzto html</progress></p>
+<div class="box" (scroll)="onScroll($event)">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae corporis dolorum similique voluptas aperiam magni? Reprehenderit error magnam a dicta eligendi debitis, saepe molestiae quia vitae modi animi consequatur repudiandae?</p>
+</div>
+<input type="text" [value]="teksto" (keyup)="changename($event)" >
+<hr>
+<h1>Propiedades</h1>
+<button disabled="false">Mucho texto</button>
+<input type="text" [value]="teksto">
+<progress max="100" [value]="age">Tekzto html</progress>
+<img [src]="img" width="50" height="50">
+<p>Había un gato llamado {{person.name}} que tenía {{person.age}} años.</p>
+<hr>
+<h1 id="inicio">Hola mundo</h1>
+<h2>{{'jajaajaa '.repeat(5)}}</h2>
+<p> (4 + 3)<sub>6</sub> =({{5+5}})<sub>6</sub></p>
+<h3>Hola soy {{name}} y no tengo {{age}}</h3>
+<img src={{img}}>
